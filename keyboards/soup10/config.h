@@ -25,6 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER icesoup
 #define PRODUCT      soup10
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 1
 
 /* key matrix size */
 #define MATRIX_ROWS 4
@@ -40,6 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
+//                        0   1   2   3
 #define MATRIX_ROW_PINS { D1, D0, D4, C6 }
 #define MATRIX_COL_PINS { D7, E6, B4 }
 #define UNUSED_PINS
