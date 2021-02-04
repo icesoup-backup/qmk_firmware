@@ -1,5 +1,8 @@
 /*
-Copyright 2017 Joshua Broekhuijsen <snipeye+qmk@gmail.com>
+This is the c configuration file for the keymap
+
+Copyright 2012 Jun Wako <wakojun@gmail.com>
+Copyright 2015 Jack Humbert
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,13 +20,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include <stdint.h>
-#include "host.h"
-#include "report.h"
+/* Select hand configuration */
+// #define MASTER_LEFT
+// #define MASTER_RIGHT
+#define EE_HANDS
 
-void           pointing_device_init(void);
-void           pointing_device_task(void);
-void           pointing_device_send(void);
-report_mouse_t pointing_device_get_report(void);
-void           pointing_device_set_report(report_mouse_t newMouseReport);
-bool           has_mouse_report_changed(report_mouse_t new, report_mouse_t old);
+#define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 300
+#define PERMISSIVE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
+#define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 300
